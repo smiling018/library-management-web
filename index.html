@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Library Management System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📚 Library Management System</h1>
+    <div id="loginSection">
+      <h2>Login</h2>
+      <select id="role">
+        <option value="admin">Admin</option>
+        <option value="member">Member</option>
+      </select><br/>
+      <input type="text" id="username" placeholder="Username" /><br/>
+      <input type="password" id="password" placeholder="Password" /><br/>
+      <button onclick="login()">Login</button>
+      <p id="loginMessage"></p>
+    </div>
+
+    <div id="adminSection" class="hidden">
+      <h2>Admin Panel</h2>
+      <input type="text" id="bookName" placeholder="Book Name" />
+      <input type="text" id="writerName" placeholder="Writer Name" />
+      <button onclick="addBook()">Add Book</button>
+      <button onclick="viewBooks()">View Books</button>
+      <button onclick="logout()">Logout</button>
+    </div>
+
+    <div id="memberSection" class="hidden">
+      <h2>Member Panel</h2>
+      <input type="text" id="searchWriter" placeholder="Search by Writer" />
+      <button onclick="searchWriter()">Search</button>
+      <input type="number" id="issueNo" placeholder="Issue Book No" />
+      <button onclick="issueBook()">Issue</button>
+      <input type="number" id="returnNo" placeholder="Return Book No" />
+      <button onclick="returnBook()">Return</button>
+      <button onclick="viewBooks()">View Books</button>
+      <button onclick="logout()">Logout</button>
+    </div>
+
+    <div id="output"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
